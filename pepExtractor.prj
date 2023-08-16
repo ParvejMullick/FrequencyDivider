@@ -1,0 +1,4 @@
+work	"D_flipflop.vhd"
+work	"FourBitCounter.vhd"
+work	"FrequencyDivider.vhd"
+work	"comperator.vhd"

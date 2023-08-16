@@ -1,0 +1,412 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: FrequencyDivider.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FrequencyDivider.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FrequencyDivider"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-vq100
+
+---- Source Options
+Top Module Name                    : FrequencyDivider
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Mini Project/FrequencyDivider/FourBitCounter.vhd" in Library work.
+Architecture behavioral of Entity fourbitcounter is up to date.
+Compiling vhdl file "D:/Mini Project/FrequencyDivider/comperator.vhd" in Library work.
+Architecture behavioral of Entity comperator is up to date.
+Compiling vhdl file "D:/Mini Project/FrequencyDivider/D_flipflop.vhd" in Library work.
+Architecture behavioral of Entity d_flipflop is up to date.
+Compiling vhdl file "D:/Mini Project/FrequencyDivider/FrequencyDivider.vhd" in Library work.
+Entity <FrequencyDivider> compiled.
+Entity <FrequencyDivider> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <FrequencyDivider> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <FourBitCounter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <comperator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <D_flipflop> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <FrequencyDivider> in library <work> (Architecture <Behavioral>).
+Entity <FrequencyDivider> analyzed. Unit <FrequencyDivider> generated.
+
+Analyzing Entity <FourBitCounter> in library <work> (Architecture <behavioral>).
+Entity <FourBitCounter> analyzed. Unit <FourBitCounter> generated.
+
+Analyzing Entity <comperator> in library <work> (Architecture <behavioral>).
+Entity <comperator> analyzed. Unit <comperator> generated.
+
+Analyzing Entity <D_flipflop> in library <work> (Architecture <behavioral>).
+Entity <D_flipflop> analyzed. Unit <D_flipflop> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FourBitCounter>.
+    Related source file is "D:/Mini Project/FrequencyDivider/FourBitCounter.vhd".
+    Found 4-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <FourBitCounter> synthesized.
+
+
+Synthesizing Unit <comperator>.
+    Related source file is "D:/Mini Project/FrequencyDivider/comperator.vhd".
+    Found 4-bit subtractor for signal <a>.
+    Found 4-bit comparator equal for signal <op$cmp_eq0000> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <comperator> synthesized.
+
+
+Synthesizing Unit <D_flipflop>.
+    Related source file is "D:/Mini Project/FrequencyDivider/D_flipflop.vhd".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <D_flipflop> synthesized.
+
+
+Synthesizing Unit <FrequencyDivider>.
+    Related source file is "D:/Mini Project/FrequencyDivider/FrequencyDivider.vhd".
+Unit <FrequencyDivider> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FrequencyDivider> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FrequencyDivider, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FrequencyDivider.ngr
+Top Level Output File Name         : FrequencyDivider
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 12
+#      INV                         : 3
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT4                        : 5
+#      LUT4_L                      : 1
+# FlipFlops/Latches                : 5
+#      FDC                         : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 5
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100evq100-4 
+
+ Number of Slices:                        5  out of    960     0%  
+ Number of Slice Flip Flops:              5  out of   1920     0%  
+ Number of 4 input LUTs:                 12  out of   1920     0%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of     66    10%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+a0_inv(a0_inv1:O)                  | NONE(cp1/count_0)      | 4     |
+cp3_not0000(cp3_not00001_INV_0:O)  | NONE(cp3/q)            | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.870ns (Maximum Frequency: 145.560MHz)
+   Minimum input arrival time before clock: 4.055ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.870ns (frequency: 145.560MHz)
+  Total number of paths / destination ports: 18 / 5
+-------------------------------------------------------------------------
+Delay:               3.435ns (Levels of Logic = 2)
+  Source:            cp1/count_0 (FF)
+  Destination:       cp3/q (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: cp1/count_0 to cp3/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.673  cp1/count_0 (cp1/count_0)
+     LUT4:I3->O            1   0.704   0.455  a1490 (a1490)
+     LUT4:I2->O            1   0.704   0.000  a14124 (a1)
+     FDC:D                     0.308          cp3/q
+    ----------------------------------------
+    Total                      3.435ns (2.307ns logic, 1.128ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Offset:              4.055ns (Levels of Logic = 3)
+  Source:            n<3> (PAD)
+  Destination:       cp3/q (FF)
+  Destination Clock: clk falling
+
+  Data Path: n<3> to cp3/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  n_3_IBUF (n_3_IBUF)
+     LUT4:I0->O            1   0.704   0.499  a14106 (a14106)
+     LUT4:I1->O            1   0.704   0.000  a14124 (a1)
+     FDC:D                     0.308          cp3/q
+    ----------------------------------------
+    Total                      4.055ns (2.934ns logic, 1.121ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            cp3/q (FF)
+  Destination:       q2 (PAD)
+  Source Clock:      clk falling
+
+  Data Path: cp3/q to q2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.447  cp3/q (cp3/q)
+     OBUF:I->O                 3.272          q2_OBUF (q2)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.82 secs
+ 
+--> 
+
+Total memory usage is 4497052 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

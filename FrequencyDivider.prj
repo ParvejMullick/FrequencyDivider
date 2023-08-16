@@ -1,0 +1,4 @@
+vhdl work "FourBitCounter.vhd"
+vhdl work "D_flipflop.vhd"
+vhdl work "comperator.vhd"
+vhdl work "FrequencyDivider.vhd"

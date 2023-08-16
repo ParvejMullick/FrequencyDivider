@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Mini Project/FrequencyDivider/testDivider_isim_beh.exe -prj D:/Mini Project/FrequencyDivider/testDivider_beh.prj work.testDivider 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/Mini Project/FrequencyDivider/FourBitCounter.vhd" into library work
+Parsing VHDL file "D:/Mini Project/FrequencyDivider/D_flipflop.vhd" into library work
+Parsing VHDL file "D:/Mini Project/FrequencyDivider/comperator.vhd" into library work
+Parsing VHDL file "D:/Mini Project/FrequencyDivider/FrequencyDivider.vhd" into library work
+WARNING:HDLCompiler:946 - "D:/Mini Project/FrequencyDivider/FrequencyDivider.vhd" Line 65: Actual for formal port rst is neither a static name nor a globally static expression
+Parsing VHDL file "D:/Mini Project/FrequencyDivider/testDivider.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity FourBitCounter [fourbitcounter_default]
+Compiling architecture behavioral of entity comperator [comperator_default]
+Compiling architecture behavioral of entity D_flipflop [d_flipflop_default]
+Compiling architecture behavioral of entity FrequencyDivider [frequencydivider_default]
+Compiling architecture behavior of entity testdivider
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 13 VHDL Units
+Built simulation executable D:/Mini Project/FrequencyDivider/testDivider_isim_beh.exe
+Fuse Memory Usage: 34648 KB
+Fuse CPU Usage: 515 ms

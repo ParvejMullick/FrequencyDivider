@@ -1,0 +1,5 @@
+vhdl isim_temp "FourBitCounter.vhd"
+vhdl isim_temp "D_flipflop.vhd"
+vhdl isim_temp "comperator.vhd"
+vhdl isim_temp "FrequencyDivider.vhd"
+vhdl isim_temp "testDivider.vhd"

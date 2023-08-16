@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Mini Project/FrequencyDivider/FourBitCounter.xst" -ofn "D:/Mini Project/FrequencyDivider/FourBitCounter.syr" 
+xst -intstyle ise -ifn "D:/Mini Project/FrequencyDivider/FourBitCounter.xst" -ofn "D:/Mini Project/FrequencyDivider/FourBitCounter.syr" 

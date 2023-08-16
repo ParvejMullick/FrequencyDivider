@@ -1,0 +1,4 @@
+vhdl work "D:\Mini Project\FrequencyDivider\FourBitCounter.vhd"
+vhdl work "D:\Mini Project\FrequencyDivider\D_flipflop.vhd"
+vhdl work "D:\Mini Project\FrequencyDivider\comperator.vhd"
+vhdl work "D:\Mini Project\FrequencyDivider\FrequencyDivider.vhd"
